@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+    <link rel='stylesheet prefetch' href='css/7534eb3fb62294822de9eace9.css'>
+    <link rel = "icon" href = "cake.png" type = "image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>HBD2U</title>
+</head>
+<style>
+    * {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    h1{
+        word-spacing: 20px;
+    }
+    body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+    }
+    button {
+		border: 0;
+	  width: 270px;
+	  padding: 10px;
+	  margin: 20px auto;
+		-webkit-border-radius: 5px;
+		   -moz-border-radius: 5px;
+	   			  border-radius: 5px; 
+	  display: block;
+	  text-decoration: none;
+	 	text-align: center;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+	  font-size: 1.2em;
+}
+	
+button:hover {
+	  -webkit-transition: background-color 1s ease-in;  
+	 	   -moz-transition: background-color 1s ease-in;  
+	 	  	 -o-transition: background-color 1s ease-in;  
+	     	    transition: background-color 1s ease-in; 
+}
+
+button:active {
+		margin-top: 22px;
+    margin-bottom: -2px;
+}
+	
+
+/* Control the colour scheme */
+
+.green {
+		color: #FFF;
+		background: #98dcf5;
+	  -webkit-box-shadow: 0 3px 1px #65dde6;
+		   -moz-box-shadow: 0 3px 1px #bdc0c0;
+		   		  box-shadow: 0 3px 1px #65dde6;
+}
+.green:hover {background: #23a6d5;}
+.green:active {
+	  -webkit-box-shadow: 0 1px 1px #65dde6;
+		   -moz-box-shadow: 0 1px 1px #65dde6;
+		     		box-shadow: 0 1px 1px #65dde6;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.slit-in-vertical {
+	-webkit-animation: slit-in-vertical 0.45s ease-out both;
+	        animation: slit-in-vertical 0.45s ease-out both;
+}
+
+@-webkit-keyframes slit-in-vertical {
+  0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+            transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+            transform: translateZ(0) rotateY(0);
+  }
+}
+@keyframes slit-in-vertical {
+  0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+            transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+            transform: translateZ(0) rotateY(0);
+  }
+}
+
+/*---------------#region Alert--------------- */
+
+#dialogoverlay{
+  display: none;
+  opacity: .8;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  width: 100%;
+  z-index: 10;
+}
+
+#dialogbox{
+  display: none;
+  position: absolute;
+  background: rgb(253, 141, 220);
+  border-radius:7px; 
+  box-shadow: 0 4px 8px 0 rgba(172, 169, 169, 0.575);
+  transition: 0.3s;
+  width: 40%;
+  z-index: 10;
+  top:0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#dialogbox:hover {
+  box-shadow: 0 8px 16px 0 rgba(172, 169, 169, 0.575);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.pure-material-button-contained {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  padding: 0 16px;
+  min-width: 64px;
+  height: 36px;
+  vertical-align: middle;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  background-color: rgb(var(--pure-material-primary-rgb, 253, 146, 220));
+  /* background-color: rgb(1, 47, 61) */
+  box-shadow: 0 3px 1px -2px rgba(172, 169, 169, 0.575), 0 2px 2px 0 rgba(124, 124, 124, 0.575), 0 1px 5px 0 rgba(80, 79, 79, 0.575);
+  font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.pure-material-button-contained::-moz-focus-inner {
+  border: none;
+}
+
+/* ---------------Overlay--------------- */
+
+.pure-material-button-contained::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* Ripple */
+.pure-material-button-contained::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  padding: 50%;
+  width: 32px; /* Safari */
+  height: 32px; /* Safari */
+  background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 1s, transform 0.5s;
+}
+
+/* Hover, Focus */
+.pure-material-button-contained:hover,
+.pure-material-button-contained:focus {
+  box-shadow: 0 2px 4px -1px rgba(172, 169, 169, 0.575), 0 2px 2px 0 rgba(124, 124, 124, 0.575), 0 1px 5px 0 rgba(80, 79, 79, 0.575);
+}
+
+.pure-material-button-contained:hover::before {
+  opacity: 0.08;
+}
+
+.pure-material-button-contained:focus::before {
+  opacity: 0.24;
+}
+
+.pure-material-button-contained:hover:focus::before {
+  opacity: 0.3;
+}
+
+/* Active */
+.pure-material-button-contained:active {
+  box-shadow: 0 5px 5px -3px rgba(172, 169, 169, 0.575), 0 2px 2px 0 rgba(124, 124, 124, 0.575), 0 1px 5px 0 rgba(80, 79, 79, 0.575);
+}
+
+.pure-material-button-contained:active::after {
+  opacity: 0.32;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0s;
+}
+
+/* Disabled */
+.pure-material-button-contained:disabled {
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+  background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.12);
+  box-shadow: none;
+  cursor: initial;
+}
+
+.pure-material-button-contained:disabled::before {
+  opacity: 0;
+}
+
+.pure-material-button-contained:disabled::after {
+  opacity: 0;
+}
+
+#dialogbox > div{ 
+  background:#FFF; 
+  margin:8px; 
+}
+
+#dialogbox > div > #dialogboxhead{ 
+  background: rgb(241, 39, 157); 
+  font-size:19px; 
+  padding:10px; 
+  color:rgb(255, 255, 255); 
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+#dialogbox > div > #dialogboxbody{ 
+  background:rgb(253, 141, 220); 
+  padding:20px; 
+  color:#fff; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+#dialogbox > div > #dialogboxfoot{ 
+  background: rgb(253, 141, 220); 
+  padding:10px; 
+  text-align:right; 
+}
+/*#endregion Alert*/
+    
+
+</style>
+<body class="w-100">
+    <!-- <div class="header" style="margin: 7px; padding: 2px; border: 2px dotted white;"> -->
+        <h1>
+            <marquee behavior="scroll" direction="left" scrollamount="120" scrolldelay="800" >
+                <img src="cake.png" style="width:100px; height: 100px;"><img src="cake.png" style="width:100px; height: 100px;"> HAPPY BIRTHDAY TO PAT <img src="cake.png" style="width:100px; height: 100px;"><img src="cake.png" style="width:100px; height: 100px;">
+            </marquee>
+        </h1>
+            <button class="green" onclick="customAlert.alert('5/6/2564 Happy Birthday น้าเธอ มีความสุขมากๆ คิดอะไรก็ขอให้ทำให้สำเร็จ ขอให้เราอยู่ฉลองวันเกิดกันและกันไปตลอดเลยน้าา จะคอยเป็นกำลังใจให้เธอเสมอในทุกๆเรื่องเลยนะคะ รักเธอ.','HAPPY BIRTHDAY TO YOU!')">
+                PRESS!
+            </button>
+
+        <br><br><br>
+    <!-- </div> -->    <div style="margin: auto;width: 80%; height: auto;">
+        <div style="height: 0; margin: auto;padding-bottom: 80%; position:relative; width: 90%;">
+            <iframe allow="autoplay; gyroscope;" allowfullscreen height="80%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/60ba08aa4441f500bfd58625" 
+            style="border:10px; height:50%; left:0; overflow:hidden; position:absolute; top:0; width:100%" 
+            title="Embedded content made on Kapwing" width="80%">
+            </iframe>
+        </div>
+    </div>
+    
+</body>
+<script>
+    function CustomAlert(){
+  this.alert = function(message,title){
+    document.body.innerHTML = document.body.innerHTML + '<div id="dialogoverlay"></div><div id="dialogbox" class="slit-in-vertical"><div><div id="dialogboxhead"></div><div id="dialogboxbody"></div><div id="dialogboxfoot"></div></div></div>';
+
+    let dialogoverlay = document.getElementById('dialogoverlay');
+    let dialogbox = document.getElementById('dialogbox');
+    
+    let winH = window.innerHeight;
+    dialogoverlay.style.height = winH+"px";
+    
+    dialogbox.style.top = "100px";
+
+    dialogoverlay.style.display = "block";
+    dialogbox.style.display = "block";
+    
+    document.getElementById('dialogboxhead').style.display = 'block';
+
+    if(typeof title === 'undefined') {
+      document.getElementById('dialogboxhead').style.display = 'none';
+    } else {
+      document.getElementById('dialogboxhead').innerHTML = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> '+ title;
+    }
+    document.getElementById('dialogboxbody').innerHTML = message;
+    document.getElementById('dialogboxfoot').innerHTML = '<button class="pure-material-button-contained active" onclick="customAlert.ok()">OK</button>';
+  }
+  
+  this.ok = function(){
+    document.getElementById('dialogbox').style.display = "none";
+    document.getElementById('dialogoverlay').style.display = "none";
+  }
+}
+
+let customAlert = new CustomAlert();
+</script>
+</html>
